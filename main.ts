@@ -9,3 +9,7 @@ basic.forever(function () {
         maqueen.setColor(0x00ffff)
     }
 })
+basic.forever(function () {
+    maqueen.servoRun(maqueen.Servos.S1, 120)
+    maqueen.servoRun(maqueen.Servos.S1, 60)
+})
