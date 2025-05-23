@@ -1,3 +1,7 @@
+maqueen.servoRun(maqueen.Servos.S1, 120)
+basic.pause(2000)
+maqueen.servoRun(maqueen.Servos.S1, 60)
+basic.pause(2000)
 basic.forever(function () {
     if (maqueen.ultrasonic(maqueen.DistanceUnit.Centimeters) < 20) {
         maqueen.setColor(0xff0000)
@@ -8,9 +12,4 @@ basic.forever(function () {
         maqueen.writeLED(maqueen.Led.LedAll, maqueen.LedSwitch.LedOn)
         maqueen.setColor(0x00ffff)
     }
-})
-basic.forever(function () {
-    maqueen.servoRun(maqueen.Servos.S1, 120)
-    basic.pause(2000)
-    maqueen.servoRun(maqueen.Servos.S1, 60)
 })
