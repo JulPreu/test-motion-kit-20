@@ -1,10 +1,14 @@
+let start = 0
 maqueen.servoRun(maqueen.Servos.S1, 120)
 basic.pause(2000)
 maqueen.servoRun(maqueen.Servos.S1, 60)
 basic.pause(2000)
 maqueen.servoRun(maqueen.Servos.S1, 90)
+if (input.buttonIsPressed(Button.A)) {
+    start = 1
+}
 basic.forever(function () {
-    if (input.buttonIsPressed(Button.A)) {
+    if (start == 1) {
         if (maqueen.ultrasonic(maqueen.DistanceUnit.Centimeters) < 20) {
             maqueen.setColor(0xff0000)
             maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CCW, 50)
