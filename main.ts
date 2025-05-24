@@ -8,6 +8,9 @@ basic.forever(function () {
     if (input.buttonIsPressed(Button.A)) {
         start = 1
     }
+    if (input.buttonIsPressed(Button.B)) {
+        start = 0
+    }
     if (start == 1) {
         if (maqueen.ultrasonic(maqueen.DistanceUnit.Centimeters) < 20) {
             maqueen.setColor(0xff0000)
