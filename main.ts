@@ -1,9 +1,4 @@
 let start = 0
-maqueen.servoRun(maqueen.Servos.S1, 120)
-basic.pause(2000)
-maqueen.servoRun(maqueen.Servos.S1, 60)
-basic.pause(2000)
-maqueen.servoRun(maqueen.Servos.S1, 90)
 basic.forever(function () {
     if (input.buttonIsPressed(Button.A)) {
         start = 1
@@ -22,4 +17,11 @@ basic.forever(function () {
             maqueen.setColor(0x00ffff)
         }
     }
+})
+basic.forever(function () {
+    maqueen.servoRun(maqueen.Servos.S1, 120)
+    basic.pause(2000)
+    maqueen.servoRun(maqueen.Servos.S1, 60)
+    basic.pause(2000)
+    maqueen.servoRun(maqueen.Servos.S1, 90)
 })
