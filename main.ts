@@ -7,7 +7,7 @@ basic.forever(function () {
         start = 0
     }
     if (start == 1) {
-        if (maqueen.ultrasonic(maqueen.DistanceUnit.Centimeters) < 20) {
+        if (maqueen.ultrasonic(maqueen.DistanceUnit.Centimeters) < 30) {
             maqueen.setColor(0xff0000)
             maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CCW, 50)
             maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 50)
@@ -19,9 +19,9 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
+    maqueen.servoRun(maqueen.Servos.S1, 90)
     maqueen.servoRun(maqueen.Servos.S1, 120)
     basic.pause(2000)
     maqueen.servoRun(maqueen.Servos.S1, 60)
     basic.pause(2000)
-    maqueen.servoRun(maqueen.Servos.S1, 90)
 })
