@@ -19,9 +19,7 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
-    maqueen.servoRun(maqueen.Servos.S1, 90)
     maqueen.servoRun(maqueen.Servos.S1, 120)
     basic.pause(2000)
     maqueen.servoRun(maqueen.Servos.S1, 60)
-    basic.pause(2000)
 })
